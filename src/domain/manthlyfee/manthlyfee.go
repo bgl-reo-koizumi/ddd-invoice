@@ -1,7 +1,7 @@
 package manthlyfee
 
 import (
-	"github.com/bgl-reo-koizumi/ddd-invoice/src/member"
+	"github.com/bgl-reo-koizumi/ddd-invoice/src/domain/member"
 )
 
 type IManthlyfee interface {
