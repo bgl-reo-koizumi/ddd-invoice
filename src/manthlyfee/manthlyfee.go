@@ -1,9 +1,11 @@
 package manthlyfee
 
-package
+import (
+	"github.com/bgl-reo-koizumi/ddd-invoice/src/member"
+)
 
 type IManthlyfee interface {
-	factory()
+	isManthlyfee()
 }
 
 type Manthlyfee struct {
@@ -11,7 +13,11 @@ type Manthlyfee struct {
 	startDate int
 	endDate int
 	course string
-	member Member
+	member member.Member
+}
 
+
+func (m *Manthlyfee) telManthlyfee() {
+	
 }
 
