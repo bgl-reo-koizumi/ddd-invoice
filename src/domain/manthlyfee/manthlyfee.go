@@ -4,11 +4,27 @@ import (
 	"github.com/bgl-reo-koizumi/ddd-invoice/src/domain/member"
 )
 
-type IManthlyfee interface {
-	isManthlyfee()
+type Manthlyfee interface {
+	canManthlyfee()
 }
 
-type Manthlyfee struct {
+type telManthlyfee struct {
+	fee int
+	startDate int
+	endDate int
+	course string
+	member member.Member
+}
+
+type tvManthlyfee struct {
+	fee int
+	startDate int
+	endDate int
+	course string
+	member member.Member
+}
+
+type lineManthlyfee struct {
 	fee int
 	startDate int
 	endDate int
@@ -17,7 +33,14 @@ type Manthlyfee struct {
 }
 
 
-func (m *Manthlyfee) telManthlyfee() {
+func (m *tvManthlyfee) canManthlyfee() {
 	
 }
 
+func (m *telManthlyfee) canManthlyfee() {
+	
+}
+
+func (m *lineManthlyfee) canManthlyfee() {
+	
+}
